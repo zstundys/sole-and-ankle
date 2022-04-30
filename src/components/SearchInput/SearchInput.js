@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-
-import { COLORS } from '../../constants';
-import VisuallyHidden from '../VisuallyHidden';
-import Icon from '../Icon';
+import React from "react";
+import styled from "styled-components/macro";
+import { COLORS } from "../../constants";
+import Icon from "../Icon";
+import VisuallyHidden from "../VisuallyHidden";
 
 const SearchInput = ({ label, ...delegated }) => {
   return (
@@ -17,6 +16,9 @@ const SearchInput = ({ label, ...delegated }) => {
 
 const Label = styled.label`
   position: relative;
+  flex: 1;
+  min-width: 96px;
+  max-width: 150px;
 `;
 
 const Input = styled.input`
@@ -27,6 +29,7 @@ const Input = styled.input`
   font-size: 0.875rem;
   color: ${COLORS.gray[100]};
   outline-offset: 4px;
+  width: 100%;
 
   &::placeholder {
     color: ${COLORS.gray[500]};
